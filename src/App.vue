@@ -2,14 +2,15 @@
 import { useColorMode } from '@vueuse/core';
 import GalaxyBackground from './components/GalaxyBackground.vue';
 const mode = useColorMode()
-mode.value = 'dark'
+mode.value = 'light'
 </script>
 
 <template>
-  <div class="relative flex items-center justify-center h-screen">
+  <RouterView />
+  <!-- <div class="relative flex items-center justify-center h-screen">
     <GalaxyBackground />
     <RouterView class="absolute top-1/2 left-1/2 min-h-[80vh] w-[80vw] transform -translate-x-1/2 -translate-y-1/2" />
-  </div>
+  </div> -->
 </template>
 
 <style scoped>
