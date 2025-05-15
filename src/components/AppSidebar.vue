@@ -15,15 +15,12 @@ import {
 
 import {
   AudioWaveform,
-  BookOpen,
-  Bot,
   Command,
   Frame,
   GalleryVerticalEnd,
   Map,
   PieChart,
-  Settings2,
-  SquareTerminal,
+  SquareTerminal
 } from 'lucide-vue-next'
 
 const props = withDefaults(defineProps<SidebarProps>(), {

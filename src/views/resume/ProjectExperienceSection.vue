@@ -10,29 +10,35 @@ interface ProjectExperience {
   responsibilities: string[];
 }
 
+/**
+ * 项目经历数据
+ * @author 王强
+ * @date 2025-05-06
+ * @version 1.0.0
+ */
 const projectExperiences = ref<ProjectExperience[]>([
   {
     name: '生产管理系统开发平台',
     time: '2023-07 - 至今',
     role: '全栈工程师',
-    description: '0/低代码快速开发平台，提供组件拖拽式表单配置，快速开发业务表单，提供工作流能力',
+    description: '基于微服务架构的企业级0/低代码快速开发平台，采用可视化拖拽式组件配置，实现业务表单的快速构建与部署。平台集成了自定义工作流引擎，支持复杂业务流程的灵活配置与自动化执行，显著提升了企业生产管理效率与系统开发速度，降低了技术门槛与维护成本。',
     techStack: ['spring cloud', 'kubernetes', 'spring ai', 'redis', 'mysql', 'minio', 'rabbitmq', 'vue2'],
     responsibilities: [
-      '0/低代码引擎架构设计',
-      'Java在线编译器',
-      '工作流程引擎开发',
-      'MCP接入',
+      '设计并实现基于DSL的0/低代码引擎核心架构，支持组件级别的元数据定义与解析',
+      '开发高性能Java动态编译与热加载系统，实现业务代码的实时编译与执行',
+      '构建基于BPMN2.0规范的工作流引擎，支持自定义节点与条件分支逻辑',
+      '设计实现MCP协议接入层',
     ],
   },
   {
     name: '多维报表',
     time: '2024-01 - 至今',
     role: '全栈工程师',
-    description: '复杂报表构建器',
+    description: '企业级多维数据分析与可视化平台，支持复杂数据源的动态接入与实时计算。系统提供丰富的图表组件与交互式数据透视功能，实现了数据可视化展示的全流程解决方案。平台采用微服务架构设计，具备高并发处理能力与横向扩展特性，满足大规模企业数据分析需求。',
     techStack: ['spring cloud', 'redis', 'mysql', 'minio', 'kubernetes', 'rabbitmq', 'vue3', 'tailwindcss'],
     responsibilities: [
-      '复杂报表构建引擎设计开发',
-      '函数解释执行器设计开发',
+      '设计并实现的报表构建引擎，支持复杂数据模型定义与数据计算',
+      '开发基于AST的高性能函数解释执行器，实现自定义公式的动态计算与实时渲染',
     ],
   },
 ]);
