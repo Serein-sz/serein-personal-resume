@@ -16,7 +16,7 @@ const techStack = ref([
     <div>
       <div v-for="tech in techStack" :key="tech.id" class="flex gap-2">
         <div class="flex items-center">
-          <div class="w-2 h-2 rounded-full bg-black"></div>
+          <div class="w-1 h-1 rounded-full bg-black"></div>
         </div>
         <span>
           {{ tech.description }}

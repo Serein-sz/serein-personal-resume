@@ -1,4 +1,5 @@
-·<script setup lang="ts">
+·
+<script setup lang="ts">
 import { ref, computed } from 'vue';
 import InfoCard from './InfoCard.vue';
 import { Avatar, AvatarImage } from '@/components/ui/avatar';
@@ -58,7 +59,6 @@ const calculateAge = (birthDateString: string): number => {
 };
 
 const baseInfo = computed<string[]>(() => [
-    '王强',
     `${calculateAge(birthDate)}岁`,
     '本科',
     '中共党员',
@@ -74,23 +74,28 @@ const educationExperience = ref<string[]>([
 
 </script>
 <template>
-    <div class="p-6">
-        <Avatar class="h-36 w-36">
-            <AvatarImage :src="Image" class="object-cover object-[center_-20px]" />
-        </Avatar>
-        <div class="mt-8">
-            <div class="text-2xl mb-2">求职意向</div>
-            <InfoCard :infos="expectedPosition" />
-        </div>
-        <Separator class="my-4" />
+    <div class="p-6 pb-0 flex gap-1">
         <div>
-            <div class="text-2xl mb-2">基本信息</div>
-            <InfoCard :infos="baseInfo" />
+            <Avatar class="h-36 w-36">
+                <AvatarImage :src="Image" class="object-cover object-[center_-20px]" />
+            </Avatar>
+            <div class="mt-2 text-center text-2xl">王强</div>
         </div>
-        <Separator class="my-4" />
-        <div>
-            <div class="text-2xl mb-2">教育经历</div>
-            <InfoCard :infos="educationExperience" />
+        <div class="flex flex-col ml-10">
+            <div class="">
+                <div class="mb-0.5">求职意向</div>
+                <InfoCard :infos="expectedPosition" />
+            </div>
+            <Separator class="my-1 w-0.5" />
+            <div>
+                <div class="mb-0.5">基本信息</div>
+                <InfoCard :infos="baseInfo" />
+            </div>
+            <Separator class="my-1 w-0.5" />
+            <div>
+                <div class="mb-0.5">教育经历</div>
+                <InfoCard :infos="educationExperience" />
+            </div>
         </div>
     </div>
 </template>

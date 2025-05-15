@@ -5,7 +5,7 @@ import WorkExperienceSection from './WorkExperienceSection.vue';
 import ProjectExperienceSection from './ProjectExperienceSection.vue';
 </script>
 <template>
-    <div class="p-6">
+    <div class="p-6 pt-1">
         <TechStack />
         <Separator class="my-2" />
         <WorkExperienceSection />

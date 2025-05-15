@@ -58,7 +58,7 @@ const projectExperiences = ref<ProjectExperience[]>([
         <div class="font-medium text-gray-800 dark:text-gray-200">核心技术栈:</div>
         <div class="flex flex-wrap gap-2 mt-1">
           <span v-for="(tech, techIndex) in project.techStack" :key="techIndex"
-            class="px-2 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full dark:bg-blue-900 dark:text-blue-300">
+            class="px-2 py-1.5 bg-blue-100 text-blue-800 text-xs font-medium rounded-full dark:bg-blue-900 dark:text-blue-300">
             {{ tech }}
           </span>
         </div>

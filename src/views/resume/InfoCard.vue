@@ -5,6 +5,6 @@ const props = defineProps<{
 </script>
 <template>
     <div>
-        <div v-for="info in infos" class="text-gray-300">{{ info }}</div>
+        <span v-for="(info, index) in infos" class="text-xs">{{ info +  (index === infos.length - 1 ? "" : " | ")}}</span>
     </div>
 </template>
